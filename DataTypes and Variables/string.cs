@@ -1,6 +1,6 @@
 string something, something2;
 Console.Write("Please enter your name and press enter");
-something = Convert.ToString(Console.ReadLine());
+something = Console.ReadLine();
 
 Console.WriteLine(something);
 Console.WriteLine("");
