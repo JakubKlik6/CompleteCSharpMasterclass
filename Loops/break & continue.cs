@@ -1,28 +1,26 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BreakContinue
+namespace HelloWorld
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int i = -10;
 
-            for(int counter = 0; counter< 10; counter++)
+            while (true)
             {
-                
-                if(counter %2 ==0)
+                if (i % 3 == 0)
                 {
-                    Console.WriteLine("Now comes an odd number!");
+                    i++;
                     continue;
                 }
-                Console.WriteLine(counter);
-            }
-            Console.Read();
+                if (i == 10) 
+                    break;
 
+                Console.WriteLine(i++);
+            }   
+            Console.Read();
         }
     }
 }
