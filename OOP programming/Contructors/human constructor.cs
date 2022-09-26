@@ -6,8 +6,8 @@ namespace completeMasterclass
 {
     internal class Human
     {
-        public string fullName, eyeColor;
-        int age;
+        private string fullName, eyeColor;
+        private int age;
 
         public Human(string fullName, string eyeColor, int age)
         {
