@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace completeMasterclass
 {
@@ -48,6 +49,22 @@ namespace completeMasterclass
             }
             else
                 Console.WriteLine("The key does not exist");
+
+
+            for (int i = 0; i < employeeDictionary.Count; i++)
+            {
+                //using Element(i) to return key value pair stored at index i
+                KeyValuePair<string, Employee> keyValuePair = employeeDictionary.ElementAt(i);
+                //print the key
+                Console.WriteLine("Key: {0}", keyValuePair.Key);
+                //storing the value in the emplyee object
+                Employee employeeValue = keyValuePair.Value;
+                //printing the properties of the emplyee object
+                Console.WriteLine("Employee name: {0}", employeeValue.name);
+                Console.WriteLine("Employee role: {0}", employeeValue.possition);
+                Console.WriteLine("Employee age: {0}", employeeValue.age);
+                Console.WriteLine("Employee salary: {0}", employeeValue.salary);
+            }
 
 
             Console.ReadKey();
