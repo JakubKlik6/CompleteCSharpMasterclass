@@ -13,7 +13,8 @@ namespace completeMasterclass
             {
                 new Employee("CEO","Jakub",25,200),
                 new Employee("CTO", "Jasiu", 31, 150),
-                new Employee("SE","Maciek",22,100)
+                new Employee("SE","Maciek",22,100),
+                new Employee("Intern","Mariusz",19,80)
             };
 
 
@@ -22,6 +23,32 @@ namespace completeMasterclass
             {
                 employeeDictionary.Add(item.possition, item);
             }
+
+            //upadte
+            string KeyToUpdate = "SE";
+            if (employeeDictionary.ContainsKey(KeyToUpdate))
+            {
+                employeeDictionary[KeyToUpdate] = new Employee("SE", "Marek", 19, 80);
+                Console.WriteLine("Emplyee with key/role {0} was updated!",KeyToUpdate);
+            }
+            else
+            {
+                Console.WriteLine("No employee found with this key {0}", KeyToUpdate);
+            }
+                
+
+            //Remove
+            string KeyToRemove = "Intern";
+            if (employeeDictionary.Remove(KeyToRemove))
+            {
+                Console.WriteLine("Emplyee with key/role {0} was removed!",KeyToRemove);
+            }
+            else
+            {
+                Console.WriteLine("No employee found with this key {0}",KeyToRemove);
+            }
+
+
 
             Console.WriteLine("What role you want to check?");
             string key = Console.ReadLine();
@@ -68,6 +95,7 @@ namespace completeMasterclass
 
 
             Console.ReadKey();
+            
         }
 
         class Employee
