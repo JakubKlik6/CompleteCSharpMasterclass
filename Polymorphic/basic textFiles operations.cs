@@ -44,17 +44,3 @@ using (StreamWriter file = new StreamWriter(@"F:\C# Masterclass Course\Projects\
 {
     file.WriteLine("Additional line");
 }
-
-
-// Example 1 - reading Text
-string text = System.IO.File.ReadAllText(@"F:\C# Masterclass Course\Projects\Assets\textFile.txt");
-
-Console.WriteLine("Textfile contains following text: {0}", text);
-
-string[] lines = System.IO.File.ReadAllLines(@"F:\C# Masterclass Course\Projects\Assets\textFile.txt");
-
-Console.WriteLine("Contents of textfile.txt = ");
-foreach (string line in lines)
-{
-    Console.WriteLine("\t" + line);
-}
