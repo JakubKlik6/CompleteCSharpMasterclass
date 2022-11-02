@@ -1,3 +1,21 @@
+//Example 1 of reading textx
+string text = System.IO.File.ReadAllText(@"C:\Users\DELL\Desktop\blabla.txt");
+
+Console.WriteLine($"Textfile contains following text: \n{text}");
+
+string[] lines = System.IO.File.ReadAllLines(@"C:\Users\DELL\Desktop\blabla.txt");
+
+Console.WriteLine("\nTextfile contains following text:");
+
+foreach (string line in lines)
+{
+    Console.WriteLine("\t" + line);
+}
+
+
+
+
+//Writing fileText
 // Method 1
 string[] lines = { "First 250", "Second 242", "Third 240" };
 
@@ -36,7 +54,7 @@ Console.WriteLine("Textfile contains following text: {0}", text);
 string[] lines = System.IO.File.ReadAllLines(@"F:\C# Masterclass Course\Projects\Assets\textFile.txt");
 
 Console.WriteLine("Contents of textfile.txt = ");
-foreach(string line in lines)
+foreach (string line in lines)
 {
     Console.WriteLine("\t" + line);
 }
