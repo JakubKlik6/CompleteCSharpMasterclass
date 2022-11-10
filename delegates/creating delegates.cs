@@ -43,3 +43,10 @@ internal class Program
         {
             return p.Age >= 65;
         }
+    }
+
+internal class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
